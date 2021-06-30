@@ -9,7 +9,7 @@ def parse(file):
 
     s = ''
 
-    with open('image.md', 'r') as f:
+    with open(file, 'r') as f:
         s = f.read()
 
     pattern = re.compile(

@@ -27,6 +27,3 @@ def image_upload(image_path, base_name):
     bucket.upload_file(image_path, base_name, ExtraArgs={
         "ContentType": "image/jpeg", 'ACL': 'public-read'})
     return f"https://{os.environ['QIITA_S3_BUCKET']}.s3.{region}.amazonaws.com/{base_name}"
-
-
-image_parse('image.md')
